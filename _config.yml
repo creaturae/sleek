@@ -5,7 +5,7 @@ description: > # Meta description of Homepage
   Blog do website Creaturae.net. Artigos sobre tecnologia, desenvolvimento
   em geral.
 baseurl: "/sleek" # the subpath of your site, e.g. /blog
-url: "https://blog.creaturae.net/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://creaturae.github.io/sleek/" # the base hostname & protocol for your site, e.g. http://example.com
 
 # SEO PLUGIN
 social:
