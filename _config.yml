@@ -25,7 +25,7 @@ navigation: # Navigation links
 tagline: >
   Blog Creaturae. Artigos de tecnologia e programação.
 
-hero_img: posts/sleek_lg.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
+hero_img: assets/img/creaturae-bg.jpg # Main background image: use the path from /assets/img/ => This will output /assets/img/posts/sleek_lg.jpg
 
 email: contact@creaturae.net # email for form submission
 
