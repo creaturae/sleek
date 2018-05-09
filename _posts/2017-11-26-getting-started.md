@@ -5,83 +5,53 @@ featured-img: sleek
 mathjax: true
 ---
 
-# Getting started
+# Fazer ou não fazer um framework PHP em 2018?
+No início de todo projeto, existe sempre a mesma pergunta crucial que pode definir não o seu sucesso ou ou o seu fracasso, mas sim a quantidade de horas extras e de esforço desnecessário despendido até a entrega. Geralmente um sistema web vem definido como: "Tudo bem, iremos fazer o projeto X, será em PHP com banco de dados MySQL. Mas qual framework iremos utilizar?"
 
-[GitHub Pages](https://pages.github.com) can automatically generate and serve the website for you.
-Let's say you have a username/organisation `my-org` and project `my-proj`; if you locate Jekyll source under `blog` folder of master branch in your repo `github.com/my-org/my-proj`, the website will be served on `my-org.github.io/my-proj`.
+Longe de ser uma resposta fácil, é uma resposta simples para quem não quer pensar no problema, seja pela falta de tempo hábil, ou por já ter se acostumado em ouvir sempre a mesma resposta, ou por não querer mesmo se envolver nessas questões, ou mesmo por entender que o melhor é fazer o que todo mundo já está fazendo. Vai muito da empresa, do seu tamanho, de seu expertise em tecnologia, de sua maturidade de desenvolvimento, e muitos outros fatores.
 
-1. Just download or fork and clone the source from [github.com/janczizikow/sleek](https://github.com/janczizikow/sleek/).
-2. Make sure your local machine has ruby and node
-3. Edit site settings in  `_config.yml` file according to your project.
-4. Replace `favicons` and `_includes/logo.svg` with your own logo.
+## Frameworks de PHP em 2018
+Hoje, em 2018, não vivemos mais uma guerra de frameworks como vivíamos no passado. As coisas se consolidaram. Laravel se tornou o padrão. É o rei dos frameworks e ponto. Ninguém em sã consciência se atreve a questionar isso. Ninguém a não ser o próprio criador do PHP, Rasmus Lerdorf. Para ele, todos os frameworks são uma perda de tempo e esforço.
 
-**Note** that you might have to adjust some CSS depending on the width and height of your logo. You can find Header / Navigation related SCSS in `_sass/layout/nav.scss`.
+Voltando ao rei dos frameworks, seus concorrentes, deixados para trás por longa margem, são todos projetos de peso e até com maior credibiliade que ele. Projetos já testados e utilizados há anos, como Symfony que á a base de outros projetos importantes como Drupal e muitos outros e o Zend, feito pelos próprios criadores do PHP que á a base do Magento. Isso sem contar com dois dos quais nenhum programador que use abre mão como CakePHP e CodeIgniter, além do Yii.
 
-## Writing content
+É preciso entender que essa hegemonia não é uma verdade absoluta.
 
-### Posts
+## PHP precisa de um framework?
+Hoje, em pleno 2018, segundo nosso bom e velho amigo Rasmus Lerdorf, não!
 
-Create a new Markdown file such as `2017-01-13-my-post.md` in `_post` folder. Configure YAML Front Matter (stuff between `---`):
+Um concorrente do PHP, o NodeJS se sai muito bem tendo uma boa quantidade de bibliotecas que executam somente um trabalho e possui um e somente um framework de requisição HTTP, o Express. Todos os outros são feitos em cima dele, coisa que nem de longe acontece com o PHP.
 
-```yaml
+## O que fazer?
+Criar uma solução utilizando pequenas e boas bibliotecas e um micro framework como o FatFree, ou o Slim me parece uma solução muito mais viável para um projeto.
+E cada parte do projeto que for necessária deve ser desenvolvida, pois para cada caso existe uma solução específica. 
+Um micro framework não possui partes que ficarão obsoletas posi ele resolve muito poouca coisa, somente as partes fundamentais, como resolver as rotas e fazer a injeção de dependência corrretamente
 
----
-layout: post # needs to be post
-title: Getting Started with Sleek # title of your post
-featured-img: sleek #optional - if you want you can include hero image
----
+## O projeto de software
+Mas o que deve conter um projeto? Quais partes são necessárias?
 
-```
+O framework é um conjunto de bibliotecas porém agrupadas de uma forma que são totalmente dependentes umas das outras. Não se pega o modelo de um e coloca o cache de outro. Mas cnão no caso do Symfony. Ele foi feito desde sua comcepção para ser dessa forma, um cojunto de bibliotecas interoperáveis e desacopladas.
 
-#### Images
+E porque não usar somente o Symfony? Bom, depende do gosto de cada um, mas o conjunto todo é doferenet da soma de suas partes. A comunidade tem preferido utilizar suas bibliotecas , mas não ele como um todo. 
 
-In case you want to add a hero image to the post, apart from changing `featured-img` in YAML, you also need to add the image file to the project. To do so, just upload an image in `.jpg` format to `_img` folder. The name must before the `.jpg` file extension has to match with `featured-img` in YAML. Next, run `gulp img` from command line to generate optimized version of the image and all the thumbnails. You have to restart  the jekyll server to see the changes. Sleek uses [Lazy Sizes](https://github.com/aFarkas/lazysizes) Lazy Loader for loading images. Check the link for more info. Lazy Sizes doesnt't require any configuration and it's going to be included in your bundled js file.
+Além dele, existem boas bibliotecas no github disponíveis e também amplamente utilizadas.
 
-### Pages
+Os componentes essenciais  são:
+    Abstração HTTP - síncrono e assíncrono
+    Rotas
+    Modelo
+    Validação
+    Template
+    Banco de Dados
+    Controle de Acesso
+    Logs
+    Tradução
 
-The home page is located under `index.md` file. To change the content or design you have to edit the `default.html` file in `_layouts` folder.
+Adicionalmente mas também não menos importante:    
+    Especificação
+    Testes Unitários
 
-In order to add a new page, create a new html or markdown file under root directory or inside `_pages` folder. To add a link to the page, edit `navigation` setting in `_config.yml`.
-
-### Images TODO
-
-Introduce gulp optimization
-
-Breakpoint | Image Type | Width | Retina
------------- | ------------ | ------------- | -------------
-xs |Post Thumb | 535px | 1070px
-sm |Post Thumb | 500px| 1000px
-md |Post Thumb | 329.375px | 658.75px
-lg |Post Thumb | 445.625px | 891.25px
-xl |Post Thumb | 353.125px | 706.25px
-
-Breakpoint | Image Type | Width | Retina
------------- | ------------ | ------------- | -------------
-xs |Post Hero | 535px | 1070px
-sm |Post Hero | 500px| 1000px
-md |Post Hero | 329.375px | 658.75px
-lg |Post Hero | 445.625px | 891.25px
-xl |Post Hero | 353.125px | 706.25px
-
-### MathJax
-
-If you want to use [MathJax](https://www.mathjax.org/) in your posts, add `mathjax: true` in [YAML front matter](https://jekyllrb.com/docs/frontmatter/) of your post:
-
-```yaml
----
-layout: post
-title: Blog Post with MathJax
-featured-img: sleek # optional - if you want you can include name of hero image
-mathjax: true # add this line in order to enable MathJax in the post
----
-```
-
-#### Example
-
-In N-dimensional simplex noise, the squared kernel summation radius $r^2$ is $\frac 1 2$
-for all values of N. This is because the edge length of the N-simplex $s = \sqrt {\frac {N} {N + 1}}$
-divides out of the N-simplex height $h = s \sqrt {\frac {N + 1} {2N}}$.
-The kerel summation radius $r$ is equal to the N-simplex height $h$.
-
-$$ r = h = \sqrt{\frac {1} {2}} = \sqrt{\frac {N} {N+1}} \sqrt{\frac {N+1} {2N}} $$
-Happy hacking!
+#Links
+https://symfony.com/components
+http://br.phptherightway.com/
+http://www.phpthewrongway.com/
