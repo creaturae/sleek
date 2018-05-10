@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "10 coisas que sua empresa deve saber sobre o GDPR da União Europeia"
+title: 10 coisas que sua empresa deve saber sobre o GDPR da União Europeia
 featured-img: shane-rounce-205187
-categories: 
+categories: null
+published: true
 ---
 
 
@@ -40,4 +41,4 @@ Para auxiliar na compreensão do GDPR, sua importância e seu impacto sobre as e
 
 Trata-se de enxergar além das multas e demais penalidades e entender que a conformidade a tais regras extrapola as perdas financeiras para alcançar outros valores, como reputação e confiança do consumidor. Não é apenas uma questão de segurança de dados, de leis ou de tecnologia, mas uma questão empresarial que deve ser tratada de forma holística e comprometida, inserida nas estratégias de cada negócio.
 
-#Fonte: jota.info
+__Fonte: jota.info
