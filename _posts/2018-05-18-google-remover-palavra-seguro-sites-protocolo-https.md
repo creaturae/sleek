@@ -1,5 +1,7 @@
 ---
 layout: post
+title: Google vai remover a palavra 'Seguro' para sites com protocolo HTTPS
+feature-image: https://img.ibxk.com.br//2018/05/17/17175938743384-t1200x480.jpg
 ---
 
 O protocolo HTTPS vai se tornando um padrão na internet e a Google sabe disso. Examente por este ponto, a companhia anunciou que vai retirar a palavra "seguro" que aparece na barra de link quando você navega em sites com o protocolo.
